@@ -1,0 +1,17 @@
+{
+  "name": "github_triage_microfrontend",
+  "version": "1.0.0",
+  "description": "A sample command-line application with an entrypoint in `bin/`, library code in `lib/`, and example unit test in `test/`.",
+  "main": "index.js",
+  "scripts": {
+    "build" : "bash ./build.sh",
+    "serve" : "serve",
+    "run:microfrontend" : "bash ./run_mf.sh",
+    "run:cdn" : "bash ./run_cdn.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
