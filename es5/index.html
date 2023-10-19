@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" type="text/css" href="http://localhost:9999/css/style.css" />
+
+  <script src="https://unpkg.com/single-spa"></script>
+  <script src="http://localhost:9999/flutter.js"></script>
+
+  <body>
+    <section class="contents">
+      <article>
+        <div id="flutter_target"></div>
+      </article>
+  
+      <aside id="demo_controls">
+        <h1>Element embedding</h1>
+  
+        <fieldset id="fx">
+          <legend>Effects</legend>
+          <input value="Shadow" data-fx="shadow" type="button" class="fx" />
+          <input value="Mirror 🧪" data-fx="mirror" type="button" class="fx" />
+          <input value="Resize" data-fx="resize" type="button" class="fx align-top" />
+          <div class="tight">
+            <input value="Spin" data-fx="spin" type="button" class="fx" />
+            <input type="range" value="0" min="-180" max="180" list="markers" id="rotation" class="tight" />
+            <datalist id="markers">
+              <option value="-180"></option>
+              <option value="-135"></option>
+              <option value="-45"></option>
+              <option value="0"></option>
+              <option value="45"></option>
+              <option value="135"></option>
+              <option value="180"></option>
+            </datalist>
+            </div>
+          <input value="Device" data-fx="handheld" type="button" class="fx" />
+        </fieldset>
+  
+        <fieldset id="interop">
+          <legend>JS Interop</legend>
+  
+          <label for="screen-selector">
+            Screen
+            <select name="screen-select" id="screen-selector" class="screen">
+              <option value="counter">Counter</option>
+              <option value="textField">TextField</option>
+              <option value="custom">Custom App</option>
+            </select>
+          </label>
+  
+          <label for="value">
+            Value
+            <input id="value" value="" type="text" readonly />
+          </label>
+          <input
+            id="increment"
+            value="Increment"
+            type="button"
+          />
+        </fieldset>
+      </aside>
+    </section>
+
+    <script src="http://localhost:9999/js/demo-css-fx.js"></script>
+    <script src="http://localhost:9999/js/demo-js-interop.js"></script>
+    <script src="http://localhost:9999/init.js"></script>
+    <script>
+      window.showEs5App = true;
+      singleSpa.registerApplication({name: 'es5-app', app, activeWhen: "/", });
+
+      singleSpa.start();
+
+    </script>
+  </body>
+</html>
+
+
