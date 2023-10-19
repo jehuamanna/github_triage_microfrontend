@@ -21,3 +21,5 @@ npm run run:cdn
 ```bash
 npm run run:microfrontend
 ```
+
+The app is run by clicking the url provided by terminal ran by ```npm run run:microfrontend``` command.
