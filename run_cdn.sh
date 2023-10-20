@@ -1,1 +1,1 @@
-serve -l 9999 -C element_embedding_demo/build/web/
+serve -l 9999 -C new_element_embedding_demo/build/web/
